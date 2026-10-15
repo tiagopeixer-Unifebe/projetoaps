@@ -1,88 +1,164 @@
-body>
+/* Configurações gerais */
+body {
+    margin: 0;
+    background-color: #101410;
+    color: white;
+    font-family: Arial, sans-serif;
+}
 
-    <header>
-        <h1>Razor<span>here</span></h1>
+/* Cabeçalho */
+header {
+    background-color: #080b08;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#planos">Planos</a>
-            <a href="#barbearias">Barbearias</a>
-        </nav>
-    </header>
+header h1 {
+    margin: 0;
+}
 
-    <main>
-        <section class="inicio" id="inicio">
-            <div class="texto-inicio">
-                <h2>Seu corte, do seu jeito.</h2>
+header h1 span {
+    color: #35e68a;
+}
 
-                <p>
-                    Encontre barbearias, agende seu horário
-                    e escolha o plano ideal para você.
-                </p>
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
 
-                <a href="#planos" class="botao">Conhecer planos</a>
-            </div>
-        </section>
-    </main>
+nav a:hover {
+    color: #35e68a;
+}
+
+/* Apresentação */
+.inicio {
+    min-height: 450px;
+    padding: 60px 8%;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to right,
+            #101410 20%,
+            rgba(16, 20, 16, 0.5)),
+        url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1400&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+.texto-inicio {
+    max-width: 500px;
+}
+
+.texto-inicio h2 {
+    font-size: 45px;
+}
+
+.texto-inicio p {
+    color: #cccccc;
+    line-height: 1.7;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 13px 22px;
+    background-color: #35e68a;
+    color: #101410;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: white;
+}
 
 
-    <section class="planos" id="planos">
-        <h2>Nossos planos</h2>
+/* Seção de planos */
+.planos {
+    padding: 60px 8%;
+    text-align: center;
+}
 
-        <p class="descricao">
-            Escolha o plano ideal para manter seu estilo em dia.
-        </p>
+.planos h2 {
+    font-size: 32px;
+}
 
-        <div class="lista-planos">
+.descricao {
+    color: #cccccc;
+    margin-bottom: 35px;
+}
 
-            <div class="cartao">
-                <h3>Básico</h3>
-                <p class="preco">R$ 49,90/mês</p>
-                <p>1 corte por mês</p>
-                <p>Agendamento online</p>
-                <a href="#barbearias" class="botao">Escolher plano</a>
-            </div>
+.lista-planos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
 
-            <div class="cartao destaque">
-                <h3>Premium</h3>
-                <p class="preco">R$ 89,90/mês</p>
-                <p>2 cortes por mês</p>
-                <p>Mais opções de horários</p>
-                <a href="#barbearias" class="botao">Escolher plano</a>
-            </div>
+.cartao {
+    background-color: #1b221c;
+    border: 1px solid #39443b;
+    border-radius: 8px;
+    padding: 25px;
+    width: 230px;
+}
 
-            <div class="cartao">
-                <h3>VIP</h3>
-                <p class="preco">R$ 149,90/mês</p>
-                <p>4 cortes por mês</p>
-                <p>Atendimento prioritário</p>
-                <a href="#barbearias" class="botao">Escolher plano</a>
-            </div>
+.cartao h3 {
+    font-size: 24px;
+}
 
-        </div>
-    </section>
+.preco {
+    color: #35e68a;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.cartao p {
+    color: #cccccc;
+}
+
+.cartao.destaque {
+    border: 2px solid #35e68a;
+}
+
+.cartao .botao {
+    font-size: 13px;
+}
 
 
-    <section class="barbearias" id="barbearias">
-        <h2>Tem uma barbearia?</h2>
+/* Seção para barbearias */
+.barbearias {
+    background-color: #1b221c;
+    padding: 60px 8%;
+    text-align: center;
+}
 
-        <p>
-            Cadastre seu estabelecimento no Razorhere,
-            divulgue seus serviços e conquiste novos clientes.
-        </p>
+.barbearias h2 {
+    font-size: 32px;
+}
 
-        <a href="mailto:contato@razorhere.com" class="botao">
-            Quero cadastrar minha barbearia
-        </a>
-    </section>
+.barbearias p {
+    max-width: 600px;
+    margin: 20px auto;
+    color: #cccccc;
+    line-height: 1.7;
+}
 
-    <footer>
-        <h2>Razor<span>here</span></h2>
+/* Rodapé */
+footer {
+    background-color: #080b08;
+    padding: 30px;
+    text-align: center;
+}
 
-        <p>Seu corte, do seu jeito.</p>
+footer h2 span {
+    color: #35e68a;
+}
 
-        <p>&copy; 2026 Razorhere - Projeto acadêmico</p>
-    </footer>
-    </main>
-
-</body>
+footer p {
+    color: #aaaaaa;
+    font-size: 13px;
+}
